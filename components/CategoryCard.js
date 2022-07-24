@@ -8,5 +8,6 @@ const CategoryCard = () => {
     </View>
   );
 };
+g;
 
 export default CategoryCard;
