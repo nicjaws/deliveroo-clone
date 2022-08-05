@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { ScrollView } from "react-native-web";
 
 const FeaturedRow = ({ id, title, description }) => {
   return (
@@ -10,6 +11,29 @@ const FeaturedRow = ({ id, title, description }) => {
       </View>
 
       <Text className="text-xs text-gray-400 px-4">{description}</Text>
+
+      <ScrollView
+        horizontal
+        contentContainerStyle={{
+          paddingHorizontal: 15,
+        }}
+        showsHorizontalScrollIndicator={false}
+        className="pt-4"
+      >
+        {/*RestaurandCArd */}
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo! Sushi"
+          rating={4.5}
+          genre="Japanese"
+          address="123 Main St"
+          short_description="This is a test description"
+          dishes=""
+          long={20}
+          lat={0}
+        />
+      </ScrollView>
     </View>
   );
 };
